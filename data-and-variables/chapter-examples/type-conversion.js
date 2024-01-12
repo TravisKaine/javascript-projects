@@ -1,9 +1,6 @@
-console.log(Number("2345"));
-console.log(typeof Number("2345"));
-console.log(Number(17));
+const input = require('readline-sync');
 
-console.log(Number("23bottles"));
+let info = input.question("Please enter your age: ");
+//The user enters 25.
 
-console.log(String(17));
-console.log(String(123.45));
-console.log(typeof String(123.45));
+console.log(typeof info);
