@@ -1,5 +1,5 @@
 // Initialize Variables below
-
+    let data = 'Monday 2019-03-18'
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
 
 // add logic below to verify all astronauts are ready
