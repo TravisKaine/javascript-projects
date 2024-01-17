@@ -1,5 +1,5 @@
 // Initialize Variables below
-    let data = 'Monday 2019-03-18';
+    let date = 'Monday 2019-03-18';
     let time = '10:05:34 am';
     let astronautCount = 7;
     let astronautStatus = "ready";
@@ -8,24 +8,24 @@
     let fuelMassKg = 760000;
     let shuttleMassKg = 74842.31;
     let totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
-    let maximumMassLimit = 850000
-    let fuelTempCelsius = -225
-    let minimumFuelTemp = -300
-    let maximumFuelTemp = -150
-    let fuelLevel = '100%';
-    let weatherStatus = 'clear'
+    let maximumMassLimit = 850000;
+    let fuelTempCelsius = -225;
+    let minimumFuelTemp = -300;
+    let maximumFuelTemp = -150;
+    let fuelLevel = 100;
+    let weatherStatus = 'clear';
     let preparedForLiftOff = true;
 
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
-    if (astronautCount >= 7){
-        console.log("Clear for Launch")
+    if (astronautCount <= 7){
+        console.log("Clear to Launch")
     } else if(astronautStatus === "ready"){
+        console.log("Clear to Launch")
+    } else if(totalMassKg <= maximumMassLimit){
         console.log("Clear for Launch")
-    } else if(maximumMassLimit <= 850000){
+    } else if(fuelTempCelsius >= minimumFuelTemp && fuelTempCelsius <= maximumFuelTemp){
         console.log("Clear for Launch")
-    } else if(minimumFuelTemp >= -300 && maximumFuelTemp <= -150){
-        console.log("Clear for Launch")
-    } else if(fuelLevel === '100%'){
+    } else if(fuelLevel === 100){
         console.log("Clear for Launch")
     } else if(weatherStatus === 'clear'){
         console.log("Clear for Launch")
