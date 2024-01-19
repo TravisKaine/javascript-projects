@@ -26,7 +26,7 @@ function semiDash() {
 	let check = protoArray2.split(`;`);
 	let output = ``;
 //TODO: write the code required for this step
-output = check.sort().join(-);
+output = check.sort().join();
   
 	return output;
 }
@@ -45,7 +45,7 @@ function commaSpace() {
 	let check = protoArray4.split(`, `);
 	let output = ``;
 	//TODO: write the code required for this step
-  output = check.sort().reverse().join()
+  output = check.reverse().join()
 	return output;
 }
 
