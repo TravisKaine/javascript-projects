@@ -14,22 +14,13 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   let meals = [];
   
   /// Part A #2: Write a ``for`` loop inside this function///
-
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
   for (let i = 0; i < numMeals; i++) {
-    let meal = [];
-    for (let category of pantry) {
-      let randomIndex = Math.floor(Math.random() * category.length);
-      let ingredient = category.splice(randomIndex, 1)[0];
-      meal.push(ingredient);
-      meals.push(meal);
-    }
-  
-    }
+    let newMeals = [] 
+      newMeals.push(pantry[i]);
+      meals.push(newMeals)
+    }return meals}
 
-
-  return meals;
-}
 
 
 function askForNumber() {
@@ -37,6 +28,9 @@ function askForNumber() {
   
   /// CODE YOUR SOLUTION TO PART B here ///
 
+  while(numMeals<1 || numMeals > 6 || isNaN(numMeals)){
+    numMeals = input.question()
+  }
   return numMeals;
 }
 
@@ -64,8 +58,8 @@ function runProgram() {
   /// UNCOMMENT the next two lines to test your ``askForNumber`` solution ///
   /// Tip - don't test this part until you're happy with your solution to part A #2 ///
   
-  // let mealsForX = mealAssembly(protein, grains, veggies, beverages, desserts, askForNumber());
-  // console.log(mealsForX);
+  let mealsForX = mealAssembly(protein, grains, veggies, beverages, desserts, askForNumber());
+  console.log(mealsForX);
 
     /// TEST PART C HERE ///
   /// UNCOMMENT the remaining commented lines and change the password1 and password2 strings to ensure your code is doing its job ///
