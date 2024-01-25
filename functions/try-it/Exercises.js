@@ -18,3 +18,7 @@ function makeDiamond(size) {
     }
     return diamond;
 }
+function myFunc(radius) {
+    let area = Math.PI * radius**2;
+    return area;
+}
