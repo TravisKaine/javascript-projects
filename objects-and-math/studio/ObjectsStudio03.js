@@ -7,14 +7,14 @@ function crewMass(arr) {
 	return Math.round(mass * 10) / 10;
 }
 
-let ROCKET_MASS = 75000;
+let rocketMass = 75000;
 
 function getTotalMass(arr) {
-	return crewMass(arr) + ROCKET_MASS;
+	return crewMass(arr) + rocketMass;
 }
 
 function fuelRequired(arr) {
-	return Math.ceil(getTotalMass(arr) * 9.5) + safetySurplus(arr); // this is correct
+	return Math.ceil(getTotalMass(arr) * 9.5) + safetySurplus(arr); 
 }
 
 

@@ -46,9 +46,9 @@ let crew = [candidateA,candidateC,candidateE];
 
 // Code your orbitCircumference function here:
 function orbitCircumference(altitude) {
-	const RADIUSOFEARTH = 6371; // km
-	let orbitRadius = RADIUSOFEARTH + altitude;
-	return Math.round(2 * Math.PI * orbitRadius);
+	const RADIUSOFEARTH = 6371; 
+	let radius  = RADIUSOFEARTH + altitude;
+	return Math.round(2 * Math.PI * radius);
 }
 
 // Code your missionDuration function here:
