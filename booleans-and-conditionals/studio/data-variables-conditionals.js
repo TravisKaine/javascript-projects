@@ -1,13 +1,4 @@
 // Initialize Variables below
-<<<<<<< HEAD
- let date = 'Monday 2019-03-18';
- let time = '10:05:34 am'
- let astronautCount = 7
- let astronautStatus = ready;
- let averageAstronautMassKg = 80.7
- 
- 
-=======
     let data = 'Monday 2019-03-18';
     let time = '10:05:34 am';
     let astronautCount = 7;
@@ -17,30 +8,52 @@
     let fuelMassKg = 760000;
     let shuttleMassKg = 74842.31;
     let totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
-    let maximumMassLimit = 850000
-    let fuelTempCelsius = -225
-    let minimumFuelTemp = -300
-    let maximumFuelTemp = -150
-    let fuelLevel = '100%';
-    let weatherStatus = 'clear'
+    let maximumMassLimit = 850000;
+    let fuelTempCelsius = -225;
+    let minimumFuelTemp = -300;
+    let maximumFuelTemp = -150;
+    let fuelLevel = 100;
+    let weatherStatus = 'clear';
     let preparedForLiftOff = true;
 
 >>>>>>> 4e7bb7ee05417e60f954edeb70d8a5aa4488ff3f
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
-    if (astronautCount >= 7){
-        console.log("Clear for Launch")
-    } else if(astronautStatus === "ready"){
-        console.log("Clear for Launch")
-    } else if(maximumMassLimit <= 850000){
-        console.log("Clear for Launch")
-    } else if(minimumFuelTemp >= -300 && maximumFuelTemp <= -150){
-        console.log("Clear for Launch")
-    } else if(fuelLevel === '100%'){
-        console.log("Clear for Launch")
-    } else if(weatherStatus === 'clear'){
-        console.log("Clear for Launch")
-    } else{
-        console.log("Fail To Launch")
+    if(astronautCount <= 7){
+        console.log("Astronauts loaded")
+      }else{
+        console.log("To many passangers on board")
+    }
+    if(astronautStatus = "ready"){
+        console.log("Crew members ready")
+      }else{
+        console.log("Crew not ready")
+    }
+    if(totalMassKg <= maximumMassLimit){
+        console.log(totalMassKg)
+     }else{
+        console.log("over max payload weight")
+    }
+    if(fuelTempCelsius >= minimumFuelTemp && fuelTempCelsius <= maximumFuelTemp){
+        console.log("Engine temperatures level")
+     }else if(fuelTempCelsius < minimumFuelTemp){
+        console.log("Fuel temperature Low")
+     }else if(fuelTempCelsius > maximumFuelTemp){
+        console.log("Fuel temperature High")
+    }    
+    if(fuelLevel === 100){
+        console.log("Fuel tank full")
+     }else{
+        console.log("Fuel levels low")
+    }
+    if(weatherStatus === 'clear'){
+        console.log("Weather clear")
+     }else{
+        console.log("Postpone for weather")
+    }
+    if (astronautCount <= 7 && astronautStatus === "ready" && totalMassKg <= maximumMassLimit && fuelTempCelsius >= minimumFuelTemp && fuelTempCelsius <= maximumFuelTemp && fuelLevel === 100 && weatherStatus === 'clear'){
+        console.log("Ready for Launch")
+     }else{
+        console.log("Do not engage in Launch")
     }
 // add logic below to verify all astronauts are ready
 
