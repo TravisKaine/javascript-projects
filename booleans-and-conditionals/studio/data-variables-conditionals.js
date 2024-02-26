@@ -1,5 +1,5 @@
 // Initialize Variables below
-    let date = 'Monday 2019-03-18';
+    let data = 'Monday 2019-03-18';
     let time = '10:05:34 am';
     let astronautCount = 7;
     let astronautStatus = "ready";
@@ -16,6 +16,7 @@
     let weatherStatus = 'clear';
     let preparedForLiftOff = true;
 
+>>>>>>> 4e7bb7ee05417e60f954edeb70d8a5aa4488ff3f
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
     if(astronautCount <= 7){
         console.log("Astronauts loaded")
