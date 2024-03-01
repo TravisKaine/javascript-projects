@@ -4,8 +4,33 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
+ 
+	// Function to set the search engine action based on selected radio button
+	function setSearchEngine() {
+		// Get the selected radio button
+		const buttonSelected = document.querySelector('input[name=engine]:checked');
+		// Get the form element
+		const form = document.getElementById("searchForm");
+		// Get the URL for the selected search engine from the actions object
+		let url = actions[buttonSelected.value];
+		// Set the form action attribute to the selected search engine URL
+		form.action = url;
+	}
+	
+	// Object containing actions for different search engines
+	let actions = {
+      google: 'https://www.google.com/search',
+      duckDuckGo: 'https://duckduckgo.com',
+      bing: 'https://www.bing.com/search',
+      ask: 'https://www.ask.com/web',
+    };
+
     window.addEventListener("load", function(){
         // TODO: register the handler
+
+		const form = document.getElementById("searchForm");
+		// Add event listener to the form submit event, calling setSearchEngine function
+		form.addEventListener("submit", setSearchEngine);
     });
 	</script>
 </head>
@@ -14,6 +39,13 @@
 
 	<form id="searchForm">
     <!-- TODO: add form elements -->
+	
+		<input type="text" id="q" name="q" />
+		<label><input type="radio" name="engine" value="google" /> Google</label>
+		<label><input type="radio" name="engine" value="duckDuckGo" /> DuckDuckGo</label>
+		<label><input type="radio" name="engine" value="bing" /> Bing</label>
+		<label><input type="radio" name="engine" value="ask" /> Ask</label>
+		<button id="submit" value="Search">Search</button>
 	</form>
 
 </body>
